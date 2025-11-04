@@ -78,20 +78,24 @@ public class HelloWorld extends PApplet
 		
 		// TODO: Add code here that creates map2 
 		// Then you'll modify draw() below
-
+		map2 = new UnfoldingMap(this, 450, 50, 300, 500, provider);
+		// 13.658667,100.6008692 (Samut Prakan, Thailand);
+		map2.zoomAndPanTo(zoomLevel, new Location(13.65f, 100.60f));
 	}
 
 	/** Draw the Applet window.  */
 	public void draw() {
 		// So far we only draw map1...
 		// TODO: Add code so that both maps are displayed
-		map1.draw();
+		//	map1.draw();
+		map2.draw();
 	}
 
 	// Add a main() so the sketch can be launched as a Java Application from Eclipse
 	public static void main(String[] args) {
 		// Fully-qualified class name is required by PApplet
-		processing.core.PApplet.main(new String[] { "module1.HelloWorld" });
+		PApplet.main(new String[] { "module1.HelloWorld" });
+
 	}
 
 }
