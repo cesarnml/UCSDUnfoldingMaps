@@ -95,7 +95,6 @@ public class HelloWorld extends PApplet
 	public static void main(String[] args) {
 		// Fully-qualified class name is required by PApplet
 		PApplet.main(new String[] { "module1.HelloWorld" });
-
 	}
 
 }

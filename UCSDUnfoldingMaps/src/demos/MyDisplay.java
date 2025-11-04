@@ -28,7 +28,11 @@ public class MyDisplay extends PApplet {
 		ellipse(280, 130, 50, 70);
 		
 		noFill();
-		arc(200, 280, 75, 75, 0, PI);
+		arc(200, 280, 75, 75, 0, PI );
 	}
 	
+	public static void main (String[] args) {
+		//Add main method for running as application
+		PApplet.main(new String[] {"demos.MyDisplay"});
+	}
 }
