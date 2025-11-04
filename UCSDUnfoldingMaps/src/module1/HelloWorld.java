@@ -78,7 +78,7 @@ public class HelloWorld extends PApplet
 		
 		// TODO: Add code here that creates map2 
 		// Then you'll modify draw() below
-		map2 = new UnfoldingMap(this, 450, 50, 300, 500, provider);
+		map2 = new UnfoldingMap(this, 0, 0, 800, 600, provider);
 		// 13.658667,100.6008692 (Samut Prakan, Thailand);
 		map2.zoomAndPanTo(zoomLevel, new Location(13.65f, 100.60f));
 	}
