@@ -45,7 +45,7 @@ public class MyPApplet extends PApplet{
 		rgb[1] = (int)(255*ratio);
 		rgb[2] = 0;
 		
-		//System.out.println("R" + rgb[0] + " G" + rgb[1] + " B" + rgb[2]);
+		System.out.println("R" + rgb[0] + " G" + rgb[1] + " B" + rgb[2]);
 		return rgb;
 	}	
 	
