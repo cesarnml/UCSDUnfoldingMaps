@@ -62,13 +62,17 @@ public class EarthquakeCityMap extends PApplet {
 	
 	public void setup() {		
 		// (1) Initializing canvas and map tiles
-		size(900, 700, OPENGL);
+//		size(900, 700, OPENGL);
+		size(900, 900);
 		if (offline) {
 		    map = new UnfoldingMap(this, 200, 50, 650, 600, new MBTilesMapProvider(mbTilesString));
 		    earthquakesURL = "2.5_week.atom";  // The same feed, but saved August 7, 2015
 		}
 		else {
-			map = new UnfoldingMap(this, 200, 50, 650, 600, new Google.GoogleMapProvider());
+//			map = new UnfoldingMap(this, 200, 50, 650, 600, new Google.GoogleMapProvider());
+//			map = new UnfoldingMap(this, 0, 0, 900, 700, new Google.GoogleMapProvider());
+			map = new UnfoldingMap(this, 0, 0, 900, 900, new Google.GoogleMapProvider());
+
 			// IF YOU WANT TO TEST WITH A LOCAL FILE, uncomment the next line
 		    //earthquakesURL = "2.5_week.atom";
 		}
@@ -134,24 +138,34 @@ public class EarthquakeCityMap extends PApplet {
 	private void addKey() {	
 		// Remember you can use Processing's graphics methods here
 		fill(255, 250, 240);
-		rect(25, 50, 150, 250);
+//		rect(25, 50, 150, 250);
+		rect(725, 600, 150, 250);
 		
 		fill(0);
 		textAlign(LEFT, CENTER);
 		textSize(12);
-		text("Earthquake Key", 50, 75);
+//		text("Earthquake Key", 50, 75);
+		text("Earthquake Key", 750, 625);
 		
 		fill(color(255, 0, 0));
-		ellipse(50, 125, 15, 15);
+//		ellipse(50, 125, 15, 15);
+		ellipse(750, 675, 15, 15);
+		
 		fill(color(255, 255, 0));
-		ellipse(50, 175, 10, 10);
+//		ellipse(50, 175, 10, 10);
+		ellipse(750, 725, 10, 10);
+
 		fill(color(0, 0, 255));
-		ellipse(50, 225, 5, 5);
+//		ellipse(50, 225, 5, 5);
+		ellipse(750, 775, 5, 5);
 		
 		fill(0, 0, 0);
-		text("5.0+ Magnitude", 75, 125);
-		text("4.0+ Magnitude", 75, 175);
-		text("Below 4.0", 75, 225);
+//		text("5.0+ Magnitude", 75, 125);
+//		text("4.0+ Magnitude", 75, 175);
+//		text("Below 4.0", 75, 225);
+		text("5.0+ Magnitude", 775, 675);
+		text("4.0+ Magnitude", 775, 725);
+		text("Below 4.0", 775, 775);
 	}
 
 	
@@ -248,6 +262,10 @@ public class EarthquakeCityMap extends PApplet {
 			return true;
 		}
 		return false;
+	}
+	
+	public static void main(String[] args) {
+		PApplet.main(new String[] { "module4.EarthquakeCityMap" });
 	}
 
 }
