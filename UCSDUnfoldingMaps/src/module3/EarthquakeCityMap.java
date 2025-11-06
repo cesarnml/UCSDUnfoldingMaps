@@ -34,7 +34,7 @@ public class EarthquakeCityMap extends PApplet {
 	private static final long serialVersionUID = 1L;
 
 	// IF YOU ARE WORKING OFFLINE, change the value of this variable to true
-	private static final boolean offline = false;
+	private static final boolean offline = true;
 	
 	// Less than this threshold is a light earthquake
 	public static final float THRESHOLD_MODERATE = 5;
@@ -42,7 +42,7 @@ public class EarthquakeCityMap extends PApplet {
 	public static final float THRESHOLD_LIGHT = 4;
 
 	/** This is where to find the local tiles, for working without an Internet connection */
-	public static String mbTilesString = "blankLight-1-3.mbtiles";
+	public static String mbTilesString = "data/blankLight-1-3.mbtiles";
 	
 	// The map
 	private UnfoldingMap map;
